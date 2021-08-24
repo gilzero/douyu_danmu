@@ -1,0 +1,62 @@
+47
+0: Jason健460：: G港开来了
+1: Jason健460：: 一万人
+2: 哆唻A梦OvO：: 过1星也有双倍卡
+<class 'selenium.common.exceptions.NoSuchElementException'>
+3: 仙叔叔家的老沈: nothing
+<class 'selenium.common.exceptions.NoSuchElementException'>
+4: 仙叔叔家的老沈: nothing
+5: 怪怪不要太肥吖：: …
+<class 'selenium.common.exceptions.NoSuchElementException'>
+6: 妮妮酱akcat: nothing
+7: 柠檬晶oy：: 怪怪出了
+8: 妮妮酱akcat：: 要送啥
+<class 'selenium.common.exceptions.NoSuchElementException'>
+9: 别致的chic: nothing
+10: 怪怪不要太肥吖：: 还是觉得亏了
+<class 'selenium.common.exceptions.NoSuchElementException'>
+11: 怪怪不要太肥吖: nothing
+<class 'selenium.common.exceptions.NoSuchElementException'>
+12: 怪怪不要太肥吖: nothing
+<class 'selenium.common.exceptions.NoSuchElementException'>
+<class 'selenium.common.exceptions.NoSuchElementException'>
+13: anonymous: nothing
+14: 哆唻A梦OvO：: 她们说出新的道具出的概率大一些
+15: 怪怪不要太肥吖：: 6000流量
+16: CG丶果叔：: 开开什么画面风格啊
+17: 柠檬晶oy：: 牛批
+18: 别致的chic：: 谢怪的火箭
+19: 柠檬晶oy：: 硬邦邦
+20: 哆唻A梦OvO：: 火箭应该没亏吧
+21: 得淞：: 多少出的
+<class 'selenium.common.exceptions.NoSuchElementException'>
+22: CG丶果叔: nothing
+23: CG丶果叔：: 什么画面风格啊开开
+<class 'selenium.common.exceptions.NoSuchElementException'>
+24: 用户46227870: nothing
+25: 用户46227870：: 我在直播间开通了“钻石粉丝”
+<class 'selenium.common.exceptions.NoSuchElementException'>
+26: 妮妮酱akcat: nothing
+27: 怪怪不要太肥吖：: 火箭 基本就是正常出的。还一个小飞机。
+28: 我们都很相似：: 我在#让火箭飞#中击败了鲨鱼娘，点击弹幕立即对战
+<class 'selenium.common.exceptions.NoSuchElementException'>
+29: 用户46227870: nothing
+30: 改名老吊99999：: 补你不补你队友 哈哈
+<class 'selenium.common.exceptions.NoSuchElementException'>
+31: 用户46227870: nothing
+32: 都没有我好看：: 哈哈哈哈哈哈哈
+33: 改名老吊99999：: 跟你有仇 啊哈哈
+34: 倪卡卡卡：: 太难了
+<class 'selenium.common.exceptions.NoSuchElementException'>
+35: 不困于情如此安好: nothing
+36: Jason健460：: 退吧
+37: 倪卡卡卡：: 退吧
+38: 邀月月月月月：: 掉大分
+39: 周少307：: 退吧，能吃把鸡吗
+40: 云海再相遇：: 换吧  换个妹妹
+41: Annoymous: 1629784117313
+42: Annoymous: 1629784118312
+43: Annoymous: 1629784119313
+44: Annoymous: 1629784120311
+45: Annoymous: 1629784121315
+46: Annoymous: 1629784122311
