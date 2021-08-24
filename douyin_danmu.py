@@ -5,7 +5,6 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, InvalidSelectorException, TimeoutException, ElementNotVisibleException
 import time
-# import sys
 
 '''
 use explicit wait to initial. 
@@ -18,12 +17,10 @@ https://www.browserstack.com/guide/wait-commands-in-selenium-webdriver
 
 # Configuration
 # selectors format
-# sys.setrecursionlimit(2000)
-danmu_instance_selector = 'li.Barrage-listItem'
+danmu_instance_selector = 'div.webcast-chatroom___list div.webcast-chatroom___item'
 danmu_instance_nickname_selector = '.Barrage-nickName'
 danmu_instance_content_selector = '.Barrage-content'
-url = 'https://www.douyu.com/2222'
-# url = 'http://localhost:8888/danmu.html'
+url = 'https://live.douyin.com/981772477368'
 danmus = []
 locator_from = 1
 locator_to = 0
@@ -42,12 +39,7 @@ print(f"Trying to locate Danmu, it may take some times ...")
 danmu_elements = WebDriverWait(driver, timeout_initial).until(EC.presence_of_element_located((By.CSS_SELECTOR, danmu_instance_selector)))
 print("The very first danmu found.")
 
-'''
-Known issues here: whenever reach 200 results, stop updating. Why?
-When replace with localhost douyu simulator, no such issue.Why?
-server side? 
-Try another loop method maybe? 
-'''
+
 while True:
     # use implicit approach to load new every xx second
     timeout_regular = 5
@@ -69,14 +61,14 @@ while True:
             # print(i)
             try:
                 nickname = driver.find_element_by_css_selector(
-                    f'li.Barrage-listItem:nth-child({i}) .Barrage-nickName').text
+                    f'div.webcast-chatroom___list div.webcast-chatroom___item:nth-child({i}) div span:nth-child(2)').text
             except NoSuchElementException:
                 # print(NoSuchElementException)
                 nickname = 'anonymous'
 
             try:
                 content = driver.find_element_by_css_selector(
-                    f'li.Barrage-listItem:nth-child({i}) .Barrage-content').text
+                    f'div.webcast-chatroom___list div.webcast-chatroom___item:nth-child({i}) div span:nth-child(3)').text
             except NoSuchElementException:
                 # print(NoSuchElementException)
                 content = '[Not a danmu, but an action. e.g gifting / visiting ...]'

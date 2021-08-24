@@ -5,11 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException, ElementNotVisibleException, ElementNotSelectableException
-
 import time
-import pandas as pd
-from bs4 import BeautifulSoup
-import lxml
 
 '''
 working version of douyu danmu scraping with auto update. 
@@ -107,32 +103,5 @@ while True:
 
 
 
-# if wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, checker_selector))) is not None:
-#     locator_to = len(driver.find_elements_by_css_selector(danmu_instance_wraper_selector))
-#     print(f"from: {locator_from}")
-#     print(f"to: {locator_to}")
-#
-#     for i in range(locator_from, locator_to+1):
-#         try:
-#             nickname = driver.find_element_by_css_selector(f'li.Barrage-listItem:nth-child({i}) .Barrage-nickName').text
-#         except NoSuchElementException:
-#             # print(NoSuchElementException)
-#             nickname = 'anonymous'
-#
-#         try:
-#             content = driver.find_element_by_css_selector(f'li.Barrage-listItem:nth-child({i}) .Barrage-content').text
-#         except NoSuchElementException:
-#             # print(NoSuchElementException)
-#             content = '[Not a danmu, but an action. e.g gifting / visiting ...]'
-#
-#         print(f"{i}: {nickname}: {content}")
-#
-#         danmus.append({'danmuid': i, 'name': nickname, 'content': content})
 
-
-
-
-
-
-# print(danmus)
 driver.close()
