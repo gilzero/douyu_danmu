@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, InvalidSelectorException, TimeoutException, ElementNotVisibleException
 import time
-# import sys
+
 
 '''
 use explicit wait to initial. 
@@ -22,7 +22,7 @@ https://www.browserstack.com/guide/wait-commands-in-selenium-webdriver
 danmu_instance_selector = 'li.Barrage-listItem'
 danmu_instance_nickname_selector = '.Barrage-nickName'
 danmu_instance_content_selector = '.Barrage-content'
-url = 'https://www.douyu.com/2222'
+url = 'https://www.douyu.com/312212'
 # url = 'http://localhost:8888/danmu.html'
 danmus = []
 locator_from = 1
@@ -30,7 +30,7 @@ locator_to = 0
 
 # Instanciate WebDriver
 chrome_options = Options()
-chrome_options.add_argument("--headless")
+# chrome_options.add_argument("--headless")
 driver = webdriver.Chrome(executable_path='drivers/chromedriver', options=chrome_options)
 driver.get(url)
 print(driver.title)
@@ -45,8 +45,14 @@ print("The very first danmu found.")
 '''
 Known issues here: whenever reach 200 results, stop updating. Why?
 When replace with localhost douyu simulator, no such issue.Why?
-server side? 
-Try another loop method maybe? 
+server side?
+Update: found the reason, because when it accumulated, the site
+ask you 'there are numbers of new chat", click to expand. 
+It is kind of like NetFlix, to make sure you dont fall sleep, and 
+asking you if you are still watching, so to save server load. 
+Code has not updated to fix this issue. GO back if needed in future. 
+Or some viewport issue. 
+caused locator from < locator to. 
 '''
 while True:
     # use implicit approach to load new every xx second
@@ -60,6 +66,7 @@ while True:
 
     if num_of_danmus > 0:
         locator_to = num_of_danmus + 1
+        print(f"locator_from: {locator_from}")
         print(f"locator_to: {locator_to}")
 
         for i in range(locator_from, locator_to):
