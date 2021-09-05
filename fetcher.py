@@ -40,6 +40,12 @@ class Fetcher:
 
     def run_fetch(self):
 
+        # There is documentation about use selenium to excute javascript to get element value.
+        # It could be a better solution, as the li keep rolling and cycling. WebElements travase might not be
+        # a ideal solution, not efficient and elements went stale constantly, and you load new elements to checking
+        # could be way more complicated and ineffiecient than execute js to get new li, in this case.
+        # https://www.selenium.dev/documentation/webdriver/browser_manipulation/#execute-script
+
         if self._find_initial_danmu():
             print("Continue fetching ...")
 
