@@ -22,7 +22,7 @@ https://www.browserstack.com/guide/wait-commands-in-selenium-webdriver
 danmu_instance_selector = 'li.Barrage-listItem'
 danmu_instance_nickname_selector = '.Barrage-nickName'
 danmu_instance_content_selector = '.Barrage-content'
-url = 'https://www.douyu.com/312212'
+url = 'https://www.douyu.com/92000'
 # url = 'http://localhost:8888/danmu.html'
 danmus = []
 locator_from = 1
@@ -53,6 +53,10 @@ asking you if you are still watching, so to save server load.
 Code has not updated to fix this issue. GO back if needed in future. 
 Or some viewport issue. 
 caused locator from < locator to. 
+# update. above assumption is false. 
+latst found: the page only load up tp 200. after >200, page will auto cycle old li.
+the maximum li(s) are 200 in the dom. it is keep recycling. 
+
 '''
 while True:
     # use implicit approach to load new every xx second
