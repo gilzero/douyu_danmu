@@ -1,24 +1,21 @@
 class Settings:
-    def __init__(
-            self,
-            room_id="66699",
-            list_selector="li.Barrage-listItem",
-            name_selector=".Barrage-nickName",
-            content_selector=".Barrage-content",
-            js_element_count="return document.getElementById('js-barrage-list').childElementCount",
-            js_elements_html="return document.getElementById('js-barrage-list').innerHTML",
-            soup_list_selector="li.Barrage-listItem"):
+    """
+    Class for Settings object
+    """
+    def __init__(self, room_id="92000", wait=0.5, max_results=50):
         """
 
-        :param list_selector: selector of the list of danmus
-        :param name_selector:  selector of each danmu's username
-        :param content_selector: selector of each danmu's content
+        :param room_id: Stream room id
+        :param wait: regular wait every x seconds to parse danmu(s)
         """
-        self.list_selector = list_selector
-        self.name_selector = name_selector
-        self.content_selector = content_selector
+        self.room_id = room_id
+        self.wait = wait
+        self.max_results = max_results
+        self.list_selector = "li.Barrage-listItem"
+        self.name_selector = ".Barrage-nickName"
+        self.content_selector = ".Barrage-content"
         self.url = f"https://www.douyu.com/{room_id}"
-        self.js_element_count = js_element_count
-        self.js_elements_html = js_elements_html
-        self.soup_list_selector = soup_list_selector
+        self.js_element_count = "return document.getElementById('js-barrage-list').childElementCount"
+        self.js_elements_html = "return document.getElementById('js-barrage-list').innerHTML"
+        self.soup_list_selector = "li.Barrage-listItem"
 
