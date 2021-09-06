@@ -1,7 +1,7 @@
 class Settings:
     def __init__(
             self,
-            room_id="90001",
+            room_id="66699",
             list_selector="li.Barrage-listItem",
             name_selector=".Barrage-nickName",
             content_selector=".Barrage-content",

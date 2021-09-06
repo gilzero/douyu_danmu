@@ -1,19 +1,20 @@
+from datetime import datetime
+
 class Danmu:
-    """ Class for Danmu """
+    """ Class for Danmu (This is class for Pure content only. Disregard of info/action danmu, no gifting, entering, etc """
 
-    def __init__(self, user="", content="", type="text"):
+    def __init__(self, id, nickname: str, content: str):
         """
 
-        :param user: User's name
+        :param nickname: User's name
         :param content: Valid content of a danmu.
-        :param type: content or action. (text means normal danmu content, action could be user entering or gifting.
         """
-        pass
+        self.id = id
+        self.nickname = nickname.strip().rstrip('：')
+        self.content = content.strip()
+        self.time = datetime.now().isoformat("_", "seconds")
 
 
-    def _check_is_content(self):
-        """
-        Check if is a valid danmu text or an action.
-        :return:
-        """
-        pass
+    def to_str(self):
+        """ Print danmu """
+        print(f"🐍 [{self.id}] {self.nickname}: {self.content} @ {self.time}")
